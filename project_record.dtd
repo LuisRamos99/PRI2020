@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT project (title,body,date)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
+<!ELEMENT body (header,workteam,abstract,deliverables)>
+
+
+<!ELEMENT header (key_name,title,subtitle?,date,date,supervisor)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ELEMENT supervisor (#PCDATA)>
+<!ATTLIST supervisor url CDATA #REQUIRED >
+<!ELEMENT key_name (#PCDATA)>
+
+
+<!ELEMENT workteam (elem+)>
+<!ELEMENT elem (name,mail?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ATTLIST mail url CDATA #REQUIRED >
+
+
+<!ELEMENT abstract (paragraph)+>
+<!ELEMENT paragraph (text|bold|italic|underline|internal_link|external_link)*>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT bold (#PCDATA)>
+<!ELEMENT italic (#PCDATA)>
+<!ELEMENT underline (#PCDATA)>
+<!ELEMENT internal_link (#PCDATA)>
+<!ATTLIST internal_link url CDATA #REQUIRED >
+<!ELEMENT external_link (#PCDATA)>
+<!ATTLIST external_link url CDATA #REQUIRED >
+
+
+<!ELEMENT deliverables (link)+>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link url CDATA #REQUIRED >
+
+
+<!--
+
+Subtitulo não é obrigatório.
+Workteam composta por 1 ou + elementos, cada elemento contém nome obrigatório.
+Abstract é uma lista de paragrafos.
+Deliverables é uma lista de links.
+
+-->
