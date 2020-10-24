@@ -13,7 +13,7 @@
 <!ELEMENT key_name (#PCDATA)>
 
 
-<!ELEMENT workteam (elem+)>
+<!ELEMENT workteam (elem)+>
 <!ELEMENT elem (name,mail?)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT mail (#PCDATA)>
@@ -33,7 +33,7 @@
 <!ATTLIST external_link url CDATA #REQUIRED >
 
 
-<!ELEMENT deliverables (link)+>
+<!ELEMENT deliverables (link)*>
 
 
 <!--
