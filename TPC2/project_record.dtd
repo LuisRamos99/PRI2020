@@ -33,7 +33,7 @@
 <!ATTLIST external_link url CDATA #REQUIRED >
 
 
-<!ELEMENT deliverables (link)+>
+<!ELEMENT deliverables (link)*>
 
 
 <!--
