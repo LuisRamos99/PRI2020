@@ -21,11 +21,12 @@
 
 
 <!ELEMENT abstract (paragraph)+>
-<!ELEMENT paragraph (text|bold|italic|underline|internal_link|external_link)*>
+<!ELEMENT paragraph (text|bold|italic|underline|link)*>
 <!ELEMENT text (#PCDATA)>
 <!ELEMENT bold (#PCDATA)>
 <!ELEMENT italic (#PCDATA)>
 <!ELEMENT underline (#PCDATA)>
+<!ELEMENT link (internal_link|external_link)>
 <!ELEMENT internal_link (#PCDATA)>
 <!ATTLIST internal_link url CDATA #REQUIRED >
 <!ELEMENT external_link (#PCDATA)>
@@ -33,8 +34,6 @@
 
 
 <!ELEMENT deliverables (link)+>
-<!ELEMENT link (#PCDATA)>
-<!ATTLIST link url CDATA #REQUIRED >
 
 
 <!--
@@ -43,5 +42,5 @@ Subtitulo não é obrigatório.
 Workteam composta por 1 ou + elementos, cada elemento contém nome obrigatório.
 Abstract é uma lista de paragrafos.
 Deliverables é uma lista de links.
-...
+
 -->
