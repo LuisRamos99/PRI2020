@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "project_record.dtd">
 <project>
-    <title></title>
+    <title>Project Record</title>
     <body>
         <header>
-            <key_name></key_name>
-            <title></title>
-            <date></date>
-            <date></date>
-            <supervisor url=""></supervisor>
+            <key_name>Project Record - TP2</key_name>
+            <title>Trabalho Pratico 2</title>
+            <date>22 Outubro 2020</date>
+            <date>24 Outubro 2020</date>
+            <supervisor url="http://www4.di.uminho.pt/~jcr/">
+                José Carlos Ramalho
+            </supervisor>
         </header>
         <workteam>
             <elem>
-                <name></name>
+                <name>Luis Miguel Arieira Ramos</name>
             </elem>
         </workteam>
         <abstract>
-            <paragraph></paragraph>
+            <paragraph>
+                <bold>Por preencher</bold>
+            </paragraph>
         </abstract>
-        <deliverables></deliverables>
+        <deliverables>
+            <link>
+                <external_link url="www.gmail.com">
+                    Gmail
+                </external_link>
+            </link>
+        </deliverables>
     </body>
-    <date></date>
+    <date>2020</date>
 </project>
