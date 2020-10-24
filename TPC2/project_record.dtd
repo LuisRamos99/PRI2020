@@ -21,8 +21,7 @@
 
 
 <!ELEMENT abstract (paragraph)+>
-<!ELEMENT paragraph (text|link)*>
-<!ELEMENT text (#PCDATA|bold|italic|underline)*>
+<!ELEMENT paragraph (#PCDATA|bold|italic|underline|link)*>
 <!ELEMENT bold (#PCDATA)>
 <!ELEMENT italic (#PCDATA)>
 <!ELEMENT underline (#PCDATA)>
