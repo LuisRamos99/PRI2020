@@ -25,12 +25,7 @@
         </xsl:result-document>
         <xsl:apply-templates/>
     </xsl:template>
-    
-    
-    
-    
-    
-    
+        
     
     <!--     Templates para o indice      -->
     
