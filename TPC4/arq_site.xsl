@@ -38,6 +38,7 @@
     
     <xsl:template match="ARQELEM" mode="indice">
         <li style="margin-top:20px">
+            <a name="i{position()}"/>
             <a href="http://localhost:7777/arqs/{position()}">
                 <xsl:value-of select="IDENTI"/>
                 -
@@ -131,7 +132,7 @@
                     <xsl:apply-templates select="DATA"/>
                     
                     <address style="text-align: center; font-size:20; margin-bottom:30px;">
-                        [<a href="http://localhost:7777/arqs/*">Voltar ao indice</a>]
+                        [<a href="http://localhost:7777/arqs/index#i{position()}">Voltar ao indice</a>]
                     </address>
                 </body> 
             </html>
