@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT pr (header,workteam,abstract,deliverables) >
+
+
+<!ELEMENT header (key_name,title,subtitle?,bdate,edate,supervisor)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT supervisor (#PCDATA)>
+<!ATTLIST supervisor url CDATA #IMPLIED >
+<!ELEMENT bdate (#PCDATA)>
+<!ELEMENT edate (#PCDATA)>
+<!ELEMENT key_name (#PCDATA)>
+
+
+<!ELEMENT workteam (elem+)>
+<!ELEMENT elem (name, mail)>
+<!ATTLIST elem num ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+
+
+<!ELEMENT abstract (p)+>
+<!ELEMENT p (#PCDATA|b|i|u|link)*>
+<!ELEMENT b (#PCDATA|i|u|link)*>
+<!ELEMENT i (#PCDATA|b|u|link)*>
+<!ELEMENT u (#PCDATA|i|b|link)*>
+<!ELEMENT link (#PCDATA)>
+<!ATTLIST link url CDATA #REQUIRED >
+
+
+<!ELEMENT deliverables (link)+>
