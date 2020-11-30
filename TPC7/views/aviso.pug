@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .w3-card-4
+     header.w3-container.w3-teal
+        h3.w3-left Sucesso!
+     if tipo=="post"
+      | O aluno #{dados.Nome} foi adicionado com sucesso!.   
+     else if tipo=="put"
+      | O aluno #{dados.Nome} foi atualizado com sucesso!.  
+     else if tipo=="delete"
+      | O aluno foi eliminado com sucesso!.
+     p(style="text-indent: 20px")
+      a(href="/") Página Inicial     
