@@ -1,0 +1,38 @@
+extends layout 
+
+block content
+    .w3-card-4
+     header.w3-container.w3-teal
+      h3.w3-left Editar 
+    .w3-container
+     br
+     form(class="w3-container" action=`/alunos/${aluno.Número}?_method=PUT`, method='POST')
+      label(class="w3-text-blue-gray")
+       b Número de aluno: #{aluno.Número}
+        br
+      label(class="w3-text-blue-gray")
+       b Nome:
+      input(class="w3-input w3-border w3-light-grey", type="text", name="Nome", value=`${aluno.Nome}`)    
+
+      label(class="w3-text-blue-gray") 
+       b Link GitHub:
+      input(class="w3-input w3-border w3-light-grey", type="text", name="Git", value=`${aluno.Git}`) 
+
+      label(class="w3-text-blue-gray") 
+       b TPC's completados:
+       br
+      - var count=1
+       while count<9
+        | TPC#{count}
+        | 
+        if (aluno.tpc[count-1]==1) 
+            input(type="checkbox", name=`tpc${count}` checked)  
+        else  
+            input(type="checkbox", name=`tpc${count}`) 
+        br
+        - count++
+       br
+       input(class="w3-btn w3-blue-grey" type="submit" value="Guardar")
+       |                         
+       input(class="w3-btn w3-blue-grey" type="reset" value="Limpar Valores")
+      br

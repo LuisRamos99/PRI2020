@@ -1,0 +1,39 @@
+extends layout
+
+block content
+    .w3-card-4
+      header.w3-container.w3-teal
+        h3.w3-left Aluno #{aluno.Nome}
+      if aluno != null
+       if aluno.Foto != null
+         img(src=aluno.Foto, style= "margin:10px; height: 150px")
+       ul
+        li 
+         b Número de aluno: 
+         | #{aluno.Número} 
+        li
+         b Nome: 
+         | #{aluno.Nome}
+        li
+         b GitHub: 
+         a(href=`${aluno.Git}`) #{aluno.Git}
+        li
+         b TPC's: 
+          if aluno.tpc.length == 0
+           | Aluno sem submissões!
+          else 
+           - var count = 1;
+            ul
+              each value in aluno.tpc
+               li 
+                b #{count}: 
+                if value==0 
+                 | Não submetido!
+                else 
+                 | Submetido!
+                - count++
+        a(href=`/alunos` ) 
+          button(class="w3-btn w3-teal" type="submit" style="margin:20px") Voltar atrás
+      else 
+        div(class="w3-container")
+           p Não foi possível encontrar o aluno ...     
