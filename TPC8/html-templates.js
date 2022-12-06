@@ -7,7 +7,7 @@ function fileList( files, d){
     let pagHTML = `
       <html>
           <head>
-              <title>Lista de Ficheiros</title>
+              <title>Lista dos Ficheiros</title>
               <meta charset="utf-8"/>
               <link rel="icon" href="/favicon.png"/>
               <link rel="stylesheet" href="/w3.css"/>
