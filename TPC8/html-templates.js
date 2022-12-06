@@ -87,7 +87,6 @@ function fileForm( d ){
                 <h2>Upload de Ficheiros</h2>
             </div>
 
-
             <form class="w3-container" action="/files" method="POST" enctype="multipart/form-data">
                 <br>
                 <label class="w3-text-teal" style="margin:10px"> <b> Escolher os ficheiros </b> </label>
